@@ -1,0 +1,87 @@
+﻿<Window x:Class="money_transfer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:money_transfer"
+        mc:Ignorable="d"
+        Title="Перевод валют" Height="450" Width="786">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition/>
+            <RowDefinition Height="70"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <TextBlock Text="Приложение для перевода валют" Style="{StaticResource TBStyle}"/>
+        </Grid>
+        <Grid Grid.Row="1">
+            <StackPanel >
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock>Выберете валюту для перевода:</TextBlock>
+                    <RadioButton Name="RBRubl" Margin="15,0,0,0" Checked="RBRuble_Checked">Из рубли в иностранную валюту</RadioButton>
+                    <RadioButton Name="RBForeignCurrency" Margin="15,0,0,0" Checked="RBForeignCurrency_Checked">Из иностранной валюты в рубли</RadioButton>
+                </StackPanel>
+
+
+                <StackPanel Name="Ruble" Visibility="Collapsed">
+                   
+                    <WrapPanel Orientation="Horizontal">
+                        <TextBox Name="TBRuble" Width="250"/>
+                        <TextBlock>руб.</TextBlock>
+                        <TextBox Name="TBKopek" Width="200"/>
+                        <TextBlock>коп.</TextBlock>
+                    </WrapPanel>
+
+                    <WrapPanel Orientation="Horizontal">
+                        <TextBlock>Выберите валюту для перевода</TextBlock>
+                        <ComboBox Name="CBRubl" Width="230" HorizontalAlignment="Left" Margin="15,0,0,0"  IsEnabled="False" >
+                            <ComboBoxItem>В доллары США</ComboBoxItem>
+                            <ComboBoxItem>В евро</ComboBoxItem>
+                            <ComboBoxItem>В фунт стерлингов</ComboBoxItem>
+                            <ComboBoxItem>В драм Армения</ComboBoxItem>
+                            <ComboBoxItem>В иена Япония</ComboBoxItem>
+                        </ComboBox>
+                        <Button Content="Совершить перевод" Click="Button_Click"/>
+                    </WrapPanel>
+
+                    <WrapPanel Orientation="Horizontal">
+                        <TextBlock Name="TBlResult">Результат перевода n</TextBlock>
+                        <TextBlock Name="TBlValute">денежных единиц</TextBlock>
+                    </WrapPanel>
+                    
+                </StackPanel>
+
+
+
+
+                <StackPanel >
+                    <WrapPanel Orientation="Horizontal" >
+                        <TextBlock>Выберете валюту для перевода в рубли</TextBlock>
+                        <ComboBox Name="CBForeignCurrency" Width="230"  HorizontalAlignment="Left" Margin="15,0,0,0" IsEnabled="False">
+                            <ComboBoxItem>Из доллары США</ComboBoxItem>
+                            <ComboBoxItem>Из евро</ComboBoxItem>
+                            <ComboBoxItem>Из фунт стерлингов</ComboBoxItem>
+                            <ComboBoxItem>Из драм Армения</ComboBoxItem>
+                            <ComboBoxItem>Из иена Япония</ComboBoxItem>
+                        </ComboBox>
+                    </WrapPanel>
+                    <TextBlock>Введите сумму в выбранной валюте:</TextBlock>
+                    <WrapPanel Orientation="Horizontal">
+                        <TextBlock>Сумма:</TextBlock>
+                        <TextBox Name="TBSumm" Width="250"/>
+                        <Button Content="Совершить перевод"/>
+                    </WrapPanel>
+                    <WrapPanel Orientation="Horizontal">
+                        <TextBlock>Итог:</TextBlock>
+                        <TextBox Name="TBTransferSummRuble" Width="250"/>
+                        <TextBlock>руб.</TextBlock>
+                        <TextBox Name="TBTransferSummKopek" Width="250"/>
+                        <TextBlock>коп.</TextBlock>
+                    </WrapPanel>
+                </StackPanel>
+            </StackPanel>
+        </Grid>
+
+    </Grid>
+</Window>
