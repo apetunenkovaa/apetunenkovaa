@@ -42,7 +42,7 @@
                             <ComboBoxItem>В драм Армения</ComboBoxItem>
                             <ComboBoxItem>В иена Япония</ComboBoxItem>
                         </ComboBox>
-                        <Button Content="Совершить перевод" Click="Button_Click"/>
+                        <Button Content="Совершить перевод" Click="Button_Click" />
                     </WrapPanel>
 
                     <WrapPanel Orientation="Horizontal">

@@ -7,13 +7,12 @@
         <Style x:Key="TBStyle" TargetType="TextBlock">
             <Style.Setters>
                 <Setter Property="FontSize" Value="30"/>
-                <Setter Property="FontWeight" Value="Bold"/>
-                <Setter Property="FontFamily" Value="Franklin Gothic Medium"/>
+
+                <Setter Property="FontFamily" Value="Arial Black"/>
                 <Setter Property="HorizontalAlignment" Value="Center"/>
                 <Setter Property="VerticalAlignment" Value="Center"/>
                 <Setter Property="Foreground" Value="Black"/>
             </Style.Setters>
-           
         </Style>
         
     </Application.Resources>
