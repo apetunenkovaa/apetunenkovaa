@@ -7,55 +7,62 @@
         mc:Ignorable="d"
         Title="Перевод валют" Height="450" Width="786">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="47*"/>
+            <ColumnDefinition Width="731*"/>
+        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="50"/>
             <RowDefinition/>
             <RowDefinition Height="70"/>
         </Grid.RowDefinitions>
-        <Grid Grid.Row="0">
+        <Grid Grid.Row="0" Grid.ColumnSpan="2">
             <TextBlock Text="Приложение для перевода валют" Style="{StaticResource TBStyle}"/>
         </Grid>
-        <Grid Grid.Row="1">
+        <Grid Grid.Row="1" Grid.ColumnSpan="2">
             <StackPanel >
                 <StackPanel Orientation="Horizontal">
                     <TextBlock>Выберете валюту для перевода:</TextBlock>
                     <RadioButton Name="RBRubl" Margin="15,0,0,0" Checked="RBRuble_Checked">Из рубли в иностранную валюту</RadioButton>
-                    <RadioButton Name="RBForeignCurrency" Margin="15,0,0,0" Checked="RBForeignCurrency_Checked">Из иностранной валюты в рубли</RadioButton>
+                    <RadioButton Name="RBForeignCurrency" Margin="15,0,0,0" Checked="RBForeignCurrency_Checked" FontFamily="Century Gothic">Из иностранной валюты в рубли</RadioButton>
                 </StackPanel>
 
 
-                <StackPanel Name="Ruble" Visibility="Collapsed">
-                   
+                <StackPanel Name="Param_Ruble" Visibility="Collapsed">
+
                     <WrapPanel Orientation="Horizontal">
                         <TextBox Name="TBRuble" Width="250"/>
                         <TextBlock>руб.</TextBlock>
                         <TextBox Name="TBKopek" Width="200"/>
                         <TextBlock>коп.</TextBlock>
+                        <Button Click="Button_Click_1_1" Template="{StaticResource CTButon}">Ввести</Button>
                     </WrapPanel>
+                    <StackPanel Name="Money_Transfer" Visibility="Collapsed" >
+                        <WrapPanel Orientation="Horizontal" >
+                            <TextBlock Name="TBL_Valute">Выберите валюту для перевода</TextBlock>
+                            <ComboBox Name="CBRubl" Width="230" HorizontalAlignment="Left" Margin="15,0,0,0"  IsEnabled="False" >
+                                <ComboBoxItem>В доллары США</ComboBoxItem>
+                                <ComboBoxItem>В евро</ComboBoxItem>
+                                <ComboBoxItem>В фунт стерлингов</ComboBoxItem>
+                                <ComboBoxItem>В драм Армения</ComboBoxItem>
+                                <ComboBoxItem>В иена Япония</ComboBoxItem>
+                            </ComboBox>
+                            
+                            <Button Click="Button_Click_1_2" Template="{StaticResource CTButon}">Совершить перевод</Button>
+                        </WrapPanel>
+                        <WrapPanel Orientation="Horizontal">
+                            <TextBlock Name="TBlResult">Результат перевода:</TextBlock>
+                           
+                        </WrapPanel>
+                    </StackPanel>
 
-                    <WrapPanel Orientation="Horizontal">
-                        <TextBlock>Выберите валюту для перевода</TextBlock>
-                        <ComboBox Name="CBRubl" Width="230" HorizontalAlignment="Left" Margin="15,0,0,0"  IsEnabled="False" >
-                            <ComboBoxItem>В доллары США</ComboBoxItem>
-                            <ComboBoxItem>В евро</ComboBoxItem>
-                            <ComboBoxItem>В фунт стерлингов</ComboBoxItem>
-                            <ComboBoxItem>В драм Армения</ComboBoxItem>
-                            <ComboBoxItem>В иена Япония</ComboBoxItem>
-                        </ComboBox>
-                        <Button Content="Совершить перевод" Click="Button_Click" />
-                    </WrapPanel>
 
-                    <WrapPanel Orientation="Horizontal">
-                        <TextBlock Name="TBlResult">Результат перевода n</TextBlock>
-                        <TextBlock Name="TBlValute">денежных единиц</TextBlock>
-                    </WrapPanel>
-                    
                 </StackPanel>
 
 
 
 
-                <StackPanel >
+                <StackPanel Name="ForeignCurrency"  Visibility="Collapsed">
                     <WrapPanel Orientation="Horizontal" >
                         <TextBlock>Выберете валюту для перевода в рубли</TextBlock>
                         <ComboBox Name="CBForeignCurrency" Width="230"  HorizontalAlignment="Left" Margin="15,0,0,0" IsEnabled="False">
@@ -70,7 +77,8 @@
                     <WrapPanel Orientation="Horizontal">
                         <TextBlock>Сумма:</TextBlock>
                         <TextBox Name="TBSumm" Width="250"/>
-                        <Button Content="Совершить перевод"/>
+                        <TextBlock>ден. ед.</TextBlock>
+                        <Button Click="Button_Click_2" Template="{StaticResource CTButon}">Совершить перевод</Button>
                     </WrapPanel>
                     <WrapPanel Orientation="Horizontal">
                         <TextBlock>Итог:</TextBlock>

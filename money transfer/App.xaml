@@ -7,13 +7,48 @@
         <Style x:Key="TBStyle" TargetType="TextBlock">
             <Style.Setters>
                 <Setter Property="FontSize" Value="30"/>
-
                 <Setter Property="FontFamily" Value="Arial Black"/>
                 <Setter Property="HorizontalAlignment" Value="Center"/>
                 <Setter Property="VerticalAlignment" Value="Center"/>
                 <Setter Property="Foreground" Value="Black"/>
             </Style.Setters>
         </Style>
+
+        <Style TargetType="StackPanel">
+            <Setter Property="Background" Value="#FFE873"/>
+            <Setter Property="Margin" Value="0,10,0,10"/>
+        </Style>
+
+        <Style TargetType="TextBox">
+            <Setter Property="FontFamily" Value="Century Gothic"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Margin" Value="5,5,0,5"/>
+
+        </Style>
+       
+        <Style TargetType="TextBlock">
+            <Setter Property="Margin" Value="5,0,0,5"/>
+            <Setter Property="Height" Value ="20"/>
+            <Setter Property="FontFamily" Value="Century Gothic"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="TextAlignment" Value="Center"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+        </Style>
+
+        <Style TargetType="ComboBox">
+            <Setter Property="Width" Value="18"/>
+            <Setter Property="FontFamily" Value="Century Gothic"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+        </Style>
         
+        <ControlTemplate x:Key="CTButon" TargetType="Button">
+            <Border CornerRadius="0" BorderBrush="Black" BorderThickness="1"
+                    Background="#EF3C7B" Width="200" Margin="5,5,0,5">
+                <ContentControl Content="{TemplateBinding Content}" HorizontalAlignment="Center"/>
+            </Border>
+        </ControlTemplate>
+
     </Application.Resources>
 </Application>
