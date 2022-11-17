@@ -18,8 +18,7 @@ QUICK START
 
 
 
-The Yii Developer Team
-https://www.yiiframework.com
-* **Петуненкова Анастасия** - *Initial work* - [Money Transfer](https://github.com/apetunenkovaa/money-transfer).
 
-Другие работы можно посмотреть в профиле [contributors](https://github.com/apetunenkovaa).
+* **Петуненкова Анастасия** [Money Transfer](https://github.com/apetunenkovaa/money-transfer).
+
+Другие работы можно посмотреть в [профиле](https://github.com/apetunenkovaa).
