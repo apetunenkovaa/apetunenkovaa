@@ -1,9 +1,7 @@
 
-Monet transfer progect(Конвертация валют)
+Monet transfer progect (Конвертация валют)
 =============================
-
-Thank you for choosing Yii - a high-performance component-based PHP framework.
-
+Проект предназначен для конвертирования различных валют. Есть два варианта - конвертация из рублей в валюты:
 
 INSTALLATION
 ------------
