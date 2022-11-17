@@ -10,19 +10,13 @@
 ### Необходимые условия
 
 
-REQUIREMENTS
-------------
-
-
-
-QUICK START
------------
+### Установка
 
 
 
 
+## Авторы
 
-
-* **Петуненкова Анастасия** [Money Transfer](https://github.com/apetunenkovaa/money-transfer).
+ **Петуненкова Анастасия** [Money Transfer](https://github.com/apetunenkovaa/money-transfer).
 
 Другие работы можно посмотреть в [профиле](https://github.com/apetunenkovaa).
