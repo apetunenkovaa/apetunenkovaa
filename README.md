@@ -1,5 +1,5 @@
 
-Yii Web Programming Framework
+Monet transfer progect(Конвертация валют)
 =============================
 
 Thank you for choosing Yii - a high-performance component-based PHP framework.
