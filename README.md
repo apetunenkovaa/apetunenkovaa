@@ -11,7 +11,7 @@
 * нажать на зеленую кнопку Код ("Code")
 * затем скачать zip-папку, нажав на кнопку Скачать ZIP ("Downolad ZIP")
 * 
-![This is an image]([https://myoctocat.com/assets/images/base-octocat.svg](https://ip-calculator.ru/blog/wp-content/uploads/2019/10/How-to-Compress-Files-in-a-Zip-Archive-for-Any-Use.png))
+![This is an image](https://user-images.githubusercontent.com/110453241/203793448-dcd68218-1df6-4787-afe2-7e7e2835fc1b.png)
 
 * распаковать zip-архив, через архиватор
 * *в некоторых случаях достаточно просто скопировать ссылку репозитория* 
